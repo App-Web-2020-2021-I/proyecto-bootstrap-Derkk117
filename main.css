@@ -1,0 +1,15 @@
+.HomeLink {
+    max-height: 50px;
+}
+
+.bg-mainColor {
+    background-color: rgba(81, 159, 150, 1);
+}
+
+.list-group-item-action {
+    color: #f7f7f7;
+}
+
+.list-group-item-action:hover {
+    background-color: #5bc0de;
+}
