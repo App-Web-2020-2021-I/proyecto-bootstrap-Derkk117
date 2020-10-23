@@ -3,5 +3,10 @@
 }
 
 .bg-mainColor {
-    background-color: rgba(81, 159, 150, 1);
+    background-color: rgb(47, 78, 79);
+    /*background-color: rgba(81, 159, 150, 1);*/
+}
+
+body {
+    min-width: 350px;
 }
