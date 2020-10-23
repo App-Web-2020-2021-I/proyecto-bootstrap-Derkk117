@@ -9,4 +9,40 @@
 
 body {
     min-width: 350px;
+    max-width: 2000px;
+}
+
+.carousel {
+    margin-top: 100px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    animation: animation 32s ease-in-out infinite;
+    background-attachment: fixed;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+@keyframes animation {
+    0% {
+        background-image: url(./Assets/Back_Ground6.jpg);
+    }
+    20% {
+        background-image: url(./Assets/Back_Ground7.jpg);
+    }
+    40% {
+        background-image: url(./Assets/Back_Ground9.jpg);
+    }
+    60% {
+        background-image: url(./Assets/Back_Ground9.jpg);
+    }
+    80% {
+        background-image: url(./Assets/Back_Ground10.jpg);
+    }
+    100% {
+        background-image: url(./Assets/Back_Ground6.jpg);
+    }
 }
