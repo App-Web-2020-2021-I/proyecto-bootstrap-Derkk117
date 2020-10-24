@@ -92,6 +92,10 @@ body {
     }
 }
 
+#footer {
+    font-size: 2em;
+}
+
 @media (max-width:600px) {
     .carousel-md {
         height: 165px;

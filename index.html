@@ -6,6 +6,8 @@
     <title>Vet-Zoo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./Assets/fontAwsome/css/all.css">
+    <link rel="icon" href="./Assets/pestañaicon.png">
 </head>
 
 <body class="m-auto">
@@ -117,90 +119,129 @@
         </div>
     </header>
 
+    <!-- Body -->
     <div>
         <div class="carousel-lg d-none d-sm-none d-md-none d-lg-block">
             <div class="carousel-text-lg">
-                <h1>Salud y bienestar para tu mejor amigo.</h1>
-                <h3>Cuidalos y protegelos para una vida saludable y duradera.</h3>
+                <h1>Health and wellness for your best friend.</h1>
+                <h3>Take care and protect them for a healthy and long life.</h3>
                 <a href="#" class="text-dark">Leer Más</a>
             </div>
         </div>
         <div class="carousel-md d-block d-lg-none d-xl-none">
             <div class="carousel-text-md text-black">
-                <h5>Salud y bienestar para tu mejor amigo.</h5>
-                <h6>Cuidalos y protegelos para una vida saludable y duradera.</h6>
-                <a href="#" class="text-dark">Leer Más</a>
+                <h5>Health and wellness for your best friend.</h5>
+                <h6>Take care and protect them for a healthy and long life.</h6>
+                <a href="#" class="text-dark">See More...</a>
             </div>
         </div>
         <section class="container bg-light text-justify my-5 p-2">
-            <h2 class="text-center bg-dark text-light p-2">Sobre nosotros:</h2>
+            <h2 class="text-center bg-dark text-light p-2 rounded">About us:</h2>
             <div>
                 <h3>Vet - Zoo</h3>
-                <p>En veterinaria Vet- Zoo nos preocupamos por el bienestar de tus mascotas, y por ello, contamos con una amplia variedad de tecnologias de ultima generación. Por esto garantizamos un diagnostico inmediato y confiable.
+                <p class="px-5">At Vet-Zoo veterinary we care about the well-being of your pets, and therefore, we have a wide variety of state-of-the-art technologies. Therefore, we guarantee an immediate and reliable diagnosis.
                 </p>
             </div>
             <div>
-                <h3>Nuestra Misión</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, possimus!</p>
+                <h3>Our Mission</h3>
+                <p class="px-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, possimus!</p>
             </div>
             <div>
-                <h3>Nuestra Visión</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque enim error voluptas id dolorum ad veritatis cum, quia dicta vero perferendis neque, repellendus atque impedit illo, exercitationem labore? Placeat, numquam.</p>
+                <h3>Our Vission</h3>
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque enim error voluptas id dolorum ad veritatis cum, quia dicta vero perferendis neque, repellendus atque impedit illo, exercitationem labore? Placeat, numquam.</p>
             </div>
             <div>
-                <h3>Nuestro Objetivo</h3>
+                <h3>Our objective</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quidem ipsa velit, earum ullam iste laudantium sequi beatae blanditiis, fugit laboriosam saepe nulla necessitatibus! Mollitia, eveniet exercitationem. Ex quaerat at numquam obcaecati
                     nemo fugit dolores delectus possimus tenetur consequuntur dolore doloremque eaque, autem cum aperiam ratione eveniet asperiores beatae quisquam.</p>
             </div>
         </section>
         <section class="container bg-light text-justify my-5 p-2">
             <article>
-                <h2 class="text-center bg-dark text-light p-2">¡Descuentos y Promociones!</h2>
-                <div>
-                    <div>
-                        <div>
-                            <p>Descuentos de hasta el 30%</p>
-                            <a href="#">
-                                <p>Ven a consulta con nosotros entre el 21 de octube y el 30 de noviembre y recibe un fabuloso descuento</p>
-                            </a>
+                <h2 class="text-center bg-dark text-light p-2 rounded">¡Offers and Discounts!</h2>
+                <div class="row col-12 text-center align-items-center justify-content-center">
+                    <div class="col-4-lg col-12-md p-1 rounded">
+                        <div class="card d-flex" id="promo1">
+                            <div class="card-body"><img src="./Assets/termometros.jpg" class="img-fluid" alt=""></div>
+                            <div class="card-footer">
+                                <h6 class="text-left">Offer 1</h6>
+                                <button onclick="seeMore('promo1')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                            </div>
                         </div>
-                        <img src="./Assets/consultas.jpg" alt="imagen de una consulta" class="img-fluid">
                     </div>
-                    <div>
-                        <div>
-                            <p>Descuentos de hasta el 30%</p>
-                            <a href="#">
-                                <p>Ven a consulta con nosotros entre el 21 de octube y el 30 de noviembre y recibe un fabuloso descuento</p>
-                            </a>
+                    <div class="col-4-lg col-12-md p-1 rounded">
+                        <div class="card d-flex" id="promo2">
+                            <div class="card-body"><img src="./Assets/tazones.jpg" class="img-fluid" alt=""></div>
+                            <div class="card-footer">
+                                <h6 class="text-left">Offer 2</h6>
+                                <button onclick="seeMore('promo2')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                            </div>
                         </div>
-                        <img src="./Assets/consultas.jpg" alt="imagen de una consulta" class="img-fluid">
                     </div>
-                    <div>
-                        <div>
-                            <p>Descuentos de hasta el 30%</p>
-                            <a href="#">
-                                <p>Ven a consulta con nosotros entre el 21 de octube y el 30 de noviembre y recibe un fabuloso descuento</p>
-                            </a>
+                    <div class="col-4lg col-12-md p-1 rounded">
+                        <div class="card d-flex" id="promo3">
+                            <div class="card-body"><img src="./Assets/juguetes.jpg" class="img-fluid" alt=""></div>
+                            <div class="card-footer">
+                                <h6 class="text-left">Offer 3</h6>
+                                <button onclick="seeMore('promo3')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                            </div>
                         </div>
-                        <img src="./Assets/consultas.jpg" alt="imagen de una consulta" class="img-fluid">
                     </div>
-                    <div>
-                        <div>
-                            <p>Descuentos de hasta el 30%</p>
-                            <a href="#">
-                                <p>Ven a consulta con nosotros entre el 21 de octube y el 30 de noviembre y recibe un fabuloso descuento</p>
-                            </a>
+                    <div class="col-4-lg col-12-md p-1 rounded">
+                        <div class="card d-flex" id="promo4">
+                            <div class="card-body"><img src="./Assets/consultas.jpg" class="img-fluid" alt=""></div>
+                            <div class="card-footer">
+                                <h6 class="text-left">Offer 4</h6>
+                                <button onclick="seeMore('promo4')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                            </div>
                         </div>
-                        <img src="./Assets/consultas.jpg" alt="imagen de una consulta" class="img-fluid">
                     </div>
-
                 </div>
             </article>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <div class="col-12 px-5 py-2 m-0 bg-mainColor row text-light" id="footer">
+        <div class="col-6">
+            <a href="" class="text-white">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        </div>
+        <div class="col-6 text-right">
+            Contact Us: (456)-123-45-65
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Modalv1" tabindex="-1" role="dialog" aria-labelledby="Modalv1Title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light" id="Modalv1Title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img class="img-fluid m-auto" src="" id="imagenModal" alt="">
+                </div>
+                <div class="row align-items-start p-3">
+                    <p class="p-3" id="description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js " integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=" anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+    <script src="./index.js "></script>
 </body>
 
 </html>
