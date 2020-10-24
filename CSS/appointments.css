@@ -1,0 +1,17 @@
+.HomeLink {
+    max-height: 50px;
+}
+
+.bg-mainColor {
+    background-color: rgb(47, 78, 79);
+    /*background-color: rgba(81, 159, 150, 1);*/
+}
+
+body {
+    min-width: 350px;
+    max-width: 2000px;
+}
+
+#footer {
+    font-size: 2em;
+}
