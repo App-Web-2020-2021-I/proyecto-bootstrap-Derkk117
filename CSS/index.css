@@ -73,22 +73,22 @@ body {
 
 @keyframes animation {
     0% {
-        background-image: url(./Assets/Back_Ground6.jpg);
+        background-image: url(../Assets/Back_Ground6.jpg);
     }
     20% {
-        background-image: url(./Assets/Back_Ground7.jpg);
+        background-image: url(../Assets/Back_Ground7.jpg);
     }
     40% {
-        background-image: url(./Assets/Back_Ground9.jpg);
+        background-image: url(../Assets/Back_Ground9.jpg);
     }
     60% {
-        background-image: url(./Assets/Back_Ground9.jpg);
+        background-image: url(../Assets/Back_Ground9.jpg);
     }
     80% {
-        background-image: url(./Assets/Back_Ground10.jpg);
+        background-image: url(../Assets/Back_Ground10.jpg);
     }
     100% {
-        background-image: url(./Assets/Back_Ground6.jpg);
+        background-image: url(../Assets/Back_Ground6.jpg);
     }
 }
 
