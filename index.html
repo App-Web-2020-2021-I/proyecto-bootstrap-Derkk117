@@ -26,15 +26,17 @@
                     <li class="nav-item">
                         <a href="./HTML/Appointments.html" class="nav-link text-light">Appointments</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Create Appointment</a>
-                            <a class="dropdown-item" href="#">Appointment List</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Modify Appointment</a>
-                        </div>
-                    </li>
+                    <!--
+                        <li class="nav-item dropdown">
+                            <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Create Appointment</a>
+                                <a class="dropdown-item" href="#">Appointment List</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Modify Appointment</a>
+                            </div>
+                        </li>
+                    -->
                     <li class="nav-item">
                         <a href="#" class="nav-link text-light">Inventory</a>
                     </li>
@@ -74,15 +76,18 @@
                                 <li class="nav-item">
                                     <a href="./HTML/Appointments.html" class="nav-link text-light">Appointments</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Create Appointment</a>
-                                        <a class="dropdown-item" href="#">Appointment List</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Modify Appointment</a>
-                                    </div>
-                                </li>
+                                <!--
+                                    <li class="nav-item dropdown">
+                                        <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Create Appointment</a>
+                                            <a class="dropdown-item" href="#">Appointment List</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Modify Appointment</a>
+                                        </div>
+                                    </li>
+                                -->
+
                                 <li class="nav-item">
                                     <a href="#" class="nav-link text-light">Inventory</a>
                                 </li>
@@ -152,7 +157,7 @@
             </div>
             <div>
                 <h3>Our objective</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quidem ipsa velit, earum ullam iste laudantium sequi beatae blanditiis, fugit laboriosam saepe nulla necessitatibus! Mollitia, eveniet exercitationem. Ex quaerat at numquam obcaecati
+                <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quidem ipsa velit, earum ullam iste laudantium sequi beatae blanditiis, fugit laboriosam saepe nulla necessitatibus! Mollitia, eveniet exercitationem. Ex quaerat at numquam obcaecati
                     nemo fugit dolores delectus possimus tenetur consequuntur dolore doloremque eaque, autem cum aperiam ratione eveniet asperiores beatae quisquam.</p>
             </div>
         </section>
@@ -165,7 +170,7 @@
                             <div class="card-body"><img src="./Assets/termometros.jpg" class="img-fluid" alt=""></div>
                             <div class="card-footer">
                                 <h6 class="text-left">Offer 1</h6>
-                                <button onclick="seeMore('promo1')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                                <button class="btn btn-outline-dark" onclick="seeMore('promo1')" data-toggle="modal" data-target="#Modalv1">See More</button>
                             </div>
                         </div>
                     </div>
@@ -174,7 +179,7 @@
                             <div class="card-body"><img src="./Assets/tazones.jpg" class="img-fluid" alt=""></div>
                             <div class="card-footer">
                                 <h6 class="text-left">Offer 2</h6>
-                                <button onclick="seeMore('promo2')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                                <button class="btn btn-outline-dark" onclick="seeMore('promo2')" data-toggle="modal" data-target="#Modalv1">See More</button>
                             </div>
                         </div>
                     </div>
@@ -183,7 +188,7 @@
                             <div class="card-body"><img src="./Assets/juguetes.jpg" class="img-fluid" alt=""></div>
                             <div class="card-footer">
                                 <h6 class="text-left">Offer 3</h6>
-                                <button onclick="seeMore('promo3')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                                <button class="btn btn-outline-dark" onclick="seeMore('promo3')" data-toggle="modal" data-target="#Modalv1">See More</button>
                             </div>
                         </div>
                     </div>
@@ -192,7 +197,7 @@
                             <div class="card-body"><img src="./Assets/consultas.jpg" class="img-fluid" alt=""></div>
                             <div class="card-footer">
                                 <h6 class="text-left">Offer 4</h6>
-                                <button onclick="seeMore('promo4')" data-toggle="modal" data-target="#Modalv1">See More</button>
+                                <button class="btn btn-outline-dark" onclick="seeMore('promo4')" data-toggle="modal" data-target="#Modalv1">See More</button>
                             </div>
                         </div>
                     </div>
@@ -243,7 +248,7 @@
                 <div class="modal-header bg-dark">
                     <h5 class="modal-title text-light" id="Modalv1Title"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span class="text-light" aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body d-flex">
