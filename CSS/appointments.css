@@ -24,3 +24,9 @@ body {
 .sized-container {
     min-height: 650px;
 }
+
+@media (max-width:1000px) {
+    #btn-page {
+        font-size: 10px;
+    }
+}
