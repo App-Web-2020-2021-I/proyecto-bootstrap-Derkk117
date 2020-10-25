@@ -29,4 +29,7 @@ body {
     #btn-page {
         font-size: 10px;
     }
+    .separator {
+        display: none;
+    }
 }
