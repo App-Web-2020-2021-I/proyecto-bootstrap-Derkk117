@@ -127,9 +127,9 @@
     <div class="row m-0 p-0 bg-light sized-container d-none d-sm-none d-md-none d-lg-flex">
         <div class="col-2 row p-0 m-0 justify-content-end">
             <ul class="col-11 list-group py-5">
-                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showAppointmentList('AppointmentListContainer','CreateAppointmentContainer','')">Appointment List</button></li>
-                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showCreateAppointment('AppointmentListContainer','CreateAppointmentContainer','')">Create Appointment</button></li>
-                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showModifyAppointment('AppointmentListContainer','CreateAppointmentContainer','')">Modify Appointment</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showAppointmentList('AppointmentListContainer','CreateAppointmentContainer','ModifyAppointmentContainer')">Appointment List</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showCreateAppointment('AppointmentListContainer','CreateAppointmentContainer','ModifyAppointmentContainer')">Create Appointment</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showModifyAppointment('AppointmentListContainer','CreateAppointmentContainer','ModifyAppointmentContainer')">Modify Appointment</button></li>
             </ul>
             <div class="separator bg-dark"></div>
         </div>
@@ -144,7 +144,7 @@
                 </div>
             </div>
             <div class="my-4 ">
-                <table class="table table-hover rounded w-75 m-auto">
+                <table class="table table-hover rounded w-75 m-auto text-center">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Name:</th>
@@ -231,20 +231,9 @@
                 </form>
             </div>
         </div>
-    </div>
-
-    <div class="column m-0 p-0 bg-light sized-container d-block d-lg-none d-xl-none">
-        <div class="col-12 row p-0 m-0 justify-content-center">
-            <ul class="justify-content-center align-items-center m-auto px-0 row py-2 ">
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showAppointmentList('AppointmentListContainer2','CreateAppointmentContainer2','')" class="btn btn-outline-dark" style="height: 45px;">Appointment List</button></li>
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showCreateAppointment('AppointmentListContainer2','CreateAppointmentContainer2','')" class="btn btn-outline-dark" style="height: 45px;">Create Appointment</button></li>
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showModifyAppointment('AppointmentListContainer2','CreateAppointmentContainer2','')" class="btn btn-outline-dark" style="height: 45px;">Modify Appointment</button></li>
-            </ul>
-            <div class="separator bg-dark"></div>
-        </div>
-        <div class="col-12 m-0 p-3" id="AppointmentListContainer2">
+        <div class="col-10 m-0 p-3" id="ModifyAppointmentContainer">
             <div class="m-auto">
-                <h3 class="p-3 text-center bg-dark text-light rounded">Appointment List</h3>
+                <h3 class="p-3 text-center bg-dark text-light rounded">Modify Appointment</h3>
                 <div class="input-group w-75 m-auto">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="">Search...</span>
@@ -253,7 +242,69 @@
                 </div>
             </div>
             <div class="my-4 ">
-                <table class="table table-hover rounded">
+                <form id="ModifyAppointmentForm">
+                    <div class="w-75 m-auto border border-primary rounded p-3 text-center">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Owner Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Date:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold" for="modify-picker">Select Time:</label>
+                            <div class="col-sm-10">
+                                <input type="time" id="modify-picker" class="form-control" placeholder="Select time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Age:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="w-50 row justify-content-around m-auto">
+                            <button class="btn btn-outline-danger">Cancel</button>
+                            <button class="btn btn-outline-primary">Modify Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="column m-0 p-0 bg-light sized-container d-block d-lg-none d-xl-none">
+        <div class="col-12 row p-0 m-0 justify-content-center">
+            <ul class="justify-content-center align-items-center m-auto px-0 row py-2 ">
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showAppointmentList('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Appointment List</button></li>
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showCreateAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Create Appointment</button></li>
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showModifyAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Modify Appointment</button></li>
+            </ul>
+            <div class="separator bg-dark"></div>
+        </div>
+        <div class="col-12 m-0 p-3" id="AppointmentListContainer2">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">Appointment List</h3>
+                <div class="input-group m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">Search...</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="my-4 ">
+                <table class="table table-hover rounded text-center">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Name:</th>
@@ -306,36 +357,87 @@
                 <form id="CreateAppointmentForm2">
                     <div class=" m-auto border border-primary rounded p-3 text-center">
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold">Owner Name:</label>
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Owner Name:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold">Date:</label>
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Date:</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold" for="default-picker">Select Time:</label>
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start" for="default-picker">Select Time:</label>
                             <div class="col-sm-10">
                                 <input type="time" id="default-picker-m" class="form-control" placeholder="Select time">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Name:</label>
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Name:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Age:</label>
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Age:</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control">
                             </div>
                         </div>
                         <button class="btn btn-outline-primary">Create Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 m-0 p-3" id="ModifyAppointmentContainer2">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">Modify Appointment</h3>
+                <div class="input-group m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">Search...</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="my-4 ">
+                <form id="ModifyAppointmentForm2">
+                    <div class=" m-auto border border-primary rounded p-3 text-center">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Owner Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Date:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start" for="default-picker">Select Time:</label>
+                            <div class="col-sm-10">
+                                <input type="time" id="default-picker-m" class="form-control" placeholder="Select time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Age:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row justify-content-around m-auto">
+                            <button class="btn btn-outline-danger">Cancel</button>
+                            <button class="btn btn-outline-primary">Modify Appointment</button>
+                        </div>
                     </div>
                 </form>
             </div>
