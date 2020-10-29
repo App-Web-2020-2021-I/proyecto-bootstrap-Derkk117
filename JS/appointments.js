@@ -9,7 +9,7 @@ $(document).ready(function() {
 
         //Code...
     });
-    ("#CreateAppointmentForm2").submit(function(e) {
+    $("#CreateAppointmentForm2").submit(function(e) {
         e.preventDefault();
 
         //Code...

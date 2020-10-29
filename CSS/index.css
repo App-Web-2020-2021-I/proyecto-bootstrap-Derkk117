@@ -102,4 +102,9 @@ body {
     .carousel-md {
         height: 165px;
     }
+    #footer {
+        font-size: 1em;
+        margin: 0;
+        margin-top: auto;
+    }
 }
