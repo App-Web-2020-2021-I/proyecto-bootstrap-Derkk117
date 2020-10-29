@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vet-Zoo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/appointments.css">
+    <link rel="stylesheet" href="../CSS/Inventory.css">
     <link rel="stylesheet" href="../Assets/fontAwsome/css/all.css">
     <link rel="icon" href="../Assets/pestañaicon.png">
 </head>
 
-<body class="m-auto">
+<body class="">
     <!-- App Navigato- lg and xl screens -->
     <header class="shadow-sm col-12 p-0 m-0 d-none d-sm-none d-md-none d-lg-block">
         <div class="navbar navbar-light navbar-expand-lg bg-mainColor">
@@ -26,17 +26,6 @@
                     <li class="nav-item">
                         <a href="../HTML/Appointments.html" class="nav-link text-light">Appointments</a>
                     </li>
-                    <!--
-                        <li class="nav-item dropdown">
-                        <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Create Appointment</a>
-                            <a class="dropdown-item" href="#">Appointment List</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Modify Appointment</a>
-                        </div>
-                    </li>
-                    -->
                     <li class="nav-item">
                         <a href="./Inventory.html" class="nav-link text-light">Inventory</a>
                     </li>
@@ -76,17 +65,6 @@
                                 <li class="nav-item">
                                     <a href="../HTML/Appointments.html" class="nav-link text-light">Appointments</a>
                                 </li>
-                                <!--
-                                    <li class="nav-item dropdown">
-                                    <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Reservations</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Create Appointment</a>
-                                        <a class="dropdown-item" href="#">Appointment List</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Modify Appointment</a>
-                                    </div>
-                                </li>
-                                -->
                                 <li class="nav-item">
                                     <a href="./Inventory.html" class="nav-link text-light">Inventory</a>
                                 </li>
@@ -124,65 +102,322 @@
     </header>
 
     <!-- Body -->
-
-
-    <!-- Footer -->
-    <div class="footer col-12 px-5 py-2 m-0 bg-mainColor text-light d-none d-sm-none d-md-none d-lg-flex" id="footer">
-        <div class="col-6 text-center d-inline-block">
-            <a href="" class="text-white">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-instagram-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-twitter-square"></i>
-            </a>
+    <div class="row m-0 p-0 bg-light sized-container d-none d-sm-none d-md-none d-lg-flex">
+        <div class="col-2 row p-0 m-0 justify-content-end">
+            <ul class="col-11 list-group py-5 text-center">
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showAppointmentList('','')">Product List</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showCreateAppointment('','')">Add New Product</button></li>
+            </ul>
+            <div class="separator bg-dark"></div>
         </div>
-        <div class="col-6 text-center d-inline-block">
-            Contact Us: (456)-123-45-65
-        </div>
-    </div>
-
-    <div class="footer col-12 px-5 py-2 m-0 bg-mainColor text-light d-block d-lg-none d-xl-none" id="footer">
-        <div class="col-12 text-center">
-            <a href="" class="text-white">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-instagram-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-twitter-square"></i>
-            </a>
-        </div>
-        <div class="col-12 text-center">
-            Contact Us: (456)-123-45-65
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="Modalv1" tabindex="-1" role="dialog" aria-labelledby="Modalv1Title" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-dark">
-                    <h5 class="modal-title text-light" id="Modalv1Title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body d-flex">
-                    <img class="img-fluid m-auto" src="" id="imagenModal" alt="">
-                </div>
-                <div class="row align-items-start p-3">
-                    <p class="p-3" id="description"></p>
+        <div class="col-10 m-0 p-3" id="InventoryListContainer">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">Product List</h3>
+                <div class="input-group w-75 m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">Search...</span>
+                    </div>
+                    <input type="text" class="form-control">
                 </div>
             </div>
+            <div class="my-4 ">
+                <table class="table table-hover rounded w-75 m-auto text-center">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Name:</th>
+                            <th scope="col">Description:</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Product 1</td>
+                            <td class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus vero saepe quibusdam!
+                                Animi.
+                            </td>
+                            <td>144</td>
+                            <td>50</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Product 2</td>
+                            <td class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus vero saepe quibusdam!
+                                Animi.
+                            </td>
+                            <td>144</td>
+                            <td>50</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Product 3</td>
+                            <td class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus vero saepe quibusdam!
+                                Animi.
+                            </td>
+                            <td>144</td>
+                            <td>50</td>
+                            <td>75</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-10 m-0 p-3" id="CreateAppointmentContainer">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">New Appointment</h3>
+            </div>
+            <div class="my-4 ">
+                <form id="CreateAppointmentForm">
+                    <div class="w-75 m-auto border border-primary rounded p-3 text-center">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Owner Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Date:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold" for="default-picker">Select Time:</label>
+                            <div class="col-sm-10">
+                                <input type="time" id="default-picker" class="form-control" placeholder="Select time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold">Pet Age:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary">Create Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="column m-0 p-0 bg-light sized-container d-block d-lg-none d-xl-none">
+        <div class="col-12 row p-0 m-0 justify-content-center">
+            <ul class="justify-content-center align-items-center m-auto px-0 row py-2 ">
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showAppointmentList('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Appointment List</button></li>
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showCreateAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Create Appointment</button></li>
+                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showModifyAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Modify Appointment</button></li>
+            </ul>
+            <div class="separator bg-dark"></div>
+        </div>
+        <div class="col-12 m-0 p-3" id="AppointmentListContainer2">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">Appointment List</h3>
+                <div class="input-group m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">Search...</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="my-4 ">
+                <table class="table table-hover rounded text-center">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Name:</th>
+                            <th scope="col">Date:</th>
+                            <th scope="col">Pet Name:</th>
+                            <th scope="col">Pet Age:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-12 m-0 p-3" id="CreateAppointmentContainer2">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">New Appointment</h3>
+            </div>
+            <div class="my-4 ">
+                <form id="CreateAppointmentForm2">
+                    <div class=" m-auto border border-primary rounded p-3 text-center">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Owner Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Date:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start" for="default-picker">Select Time:</label>
+                            <div class="col-sm-10">
+                                <input type="time" id="default-picker-m" class="form-control" placeholder="Select time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Age:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary">Create Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 m-0 p-3" id="ModifyAppointmentContainer2">
+            <div class="m-auto">
+                <h3 class="p-3 text-center bg-dark text-light rounded">Modify Appointment</h3>
+                <div class="input-group m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">Search...</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="my-4 ">
+                <form id="ModifyAppointmentForm2">
+                    <div class=" m-auto border border-primary rounded p-3 text-center">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Owner Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Date:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start" for="default-picker">Select Time:</label>
+                            <div class="col-sm-10">
+                                <input type="time" id="default-picker-m" class="form-control" placeholder="Select time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Age:</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row justify-content-around m-auto">
+                            <button class="btn btn-outline-danger">Cancel</button>
+                            <button class="btn btn-outline-primary">Modify Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer col-12 px-5 py-2 bg-mainColor text-light d-none d-sm-none d-md-none d-lg-flex" id="footer">
+        <div class="col-6 text-center d-inline-block">
+            <a href="" class="text-white">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        </div>
+        <div class="col-6 text-center d-inline-block">
+            Contact Us: (456)-123-45-65
+        </div>
+    </div>
+
+    <div class="footer col-12 px-5 py-2 bg-mainColor text-light d-block d-lg-none d-xl-none" id="footer">
+        <div class="col-12 text-center">
+            <a href="" class="text-white">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="" class="text-white">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+        </div>
+        <div class="col-12 text-center">
+            Contact Us: (456)-123-45-65
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js " integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=" anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+    <script src="../JS/appointments.js"></script>
 </body>
 
 </html>
