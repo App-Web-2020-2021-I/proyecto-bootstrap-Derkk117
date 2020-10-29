@@ -105,12 +105,12 @@
     <div class="row m-0 p-0 bg-light sized-container d-none d-sm-none d-md-none d-lg-flex">
         <div class="col-2 row p-0 m-0 justify-content-end">
             <ul class="col-11 list-group py-5 text-center">
-                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showAppointmentList('','')">Product List</button></li>
-                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showCreateAppointment('','')">Add New Product</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showProductList('ProductListContainer','')">Product List</button></li>
+                <li class="list-group-item"><button class="btn btn-outline-dark" onclick="showAddNewProduct('','')">Add New Product</button></li>
             </ul>
             <div class="separator bg-dark"></div>
         </div>
-        <div class="col-10 m-0 p-3" id="InventoryListContainer">
+        <div class="col-10 m-0 p-3" id="ProductListContainer">
             <div class="m-auto">
                 <h3 class="p-3 text-center bg-dark text-light rounded">Product List</h3>
                 <div class="input-group w-75 m-auto">
@@ -176,9 +176,9 @@
                 </nav>
             </div>
         </div>
-        <div class="col-10 m-0 p-3" id="CreateAppointmentContainer">
+        <div class="col-10 m-0 p-3" id="AddNewProductContainer">
             <div class="m-auto">
-                <h3 class="p-3 text-center bg-dark text-light rounded">New Appointment</h3>
+                <h3 class="p-3 text-center bg-dark text-light rounded">New Product</h3>
             </div>
             <div class="my-4 ">
                 <form id="CreateAppointmentForm">
@@ -222,16 +222,15 @@
 
     <div class="column m-0 p-0 bg-light sized-container d-block d-lg-none d-xl-none">
         <div class="col-12 row p-0 m-0 justify-content-center">
-            <ul class="justify-content-center align-items-center m-auto px-0 row py-2 ">
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showAppointmentList('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Appointment List</button></li>
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showCreateAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Create Appointment</button></li>
-                <li class="col-4 list-group-item text-center"><button id="btn-page" onclick="showModifyAppointment('AppointmentListContainer2','CreateAppointmentContainer2','ModifyAppointmentContainer2')" class="btn btn-outline-dark" style="height: 45px;">Modify Appointment</button></li>
+            <ul class="justify-content-center align-items-center m-auto px-0 row py-2">
+                <li class="col-6 list-group-item text-center"><button id="btn-page" onclick="showProductList('','')" class="btn btn-outline-dark" style="height: 45px;">Product List</button></li>
+                <li class="col-6 list-group-item text-center"><button id="btn-page" onclick="showAddNewProduct('','')" class="btn btn-outline-dark" style="height: 45px;">Add New Product</button></li>
             </ul>
             <div class="separator bg-dark"></div>
         </div>
-        <div class="col-12 m-0 p-3" id="AppointmentListContainer2">
+        <div class="col-12 m-0 p-3" id="">
             <div class="m-auto">
-                <h3 class="p-3 text-center bg-dark text-light rounded">Appointment List</h3>
+                <h3 class="p-3 text-center bg-dark text-light rounded">Product List</h3>
                 <div class="input-group m-auto">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="">Search...</span>
@@ -243,34 +242,68 @@
                 <table class="table table-hover rounded text-center">
                     <thead class="thead-light">
                         <tr>
-                            <th scope="col">Name:</th>
-                            <th scope="col">Date:</th>
-                            <th scope="col">Pet Name:</th>
-                            <th scope="col">Pet Age:</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Price</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>10</td>
-                        </tr>
+                        <div id="TableRow">
+                            <tr>
+                                <td scope="row">Product 1</td>
+                                <td>144</td>
+                                <td>50</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td class="text-justify" colspan="4">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus
+                                    vero saepe quibusdam! Animi.
+                                </td>
+                            </tr>
+                        </div>
+                        <div id="TableRow">
+                            <tr>
+                                <td scope="row">Product 1</td>
+                                <td>144</td>
+                                <td>50</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td class="text-justify" colspan="4">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus
+                                    vero saepe quibusdam! Animi.
+                                </td>
+                            </tr>
+                        </div>
+                        <div id="TableRow">
+                            <tr>
+                                <td scope="row">Product 1</td>
+                                <td>144</td>
+                                <td>50</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td class="text-justify" colspan="4">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus
+                                    vero saepe quibusdam! Animi.
+                                </td>
+                            </tr>
+                        </div>
+                        <div id="TableRow">
+                            <tr>
+                                <td scope="row">Product 1</td>
+                                <td>144</td>
+                                <td>50</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td class="text-justify" colspan="4">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, veniam assumenda dicta repellat sed odit necessitatibus! Laboriosam ducimus ullam nemo quisquam magni consequatur facere, aperiam, temporibus
+                                    vero saepe quibusdam! Animi.
+                                </td>
+                            </tr>
+                        </div>
                     </tbody>
                 </table>
-                <nav aria-label="Page navigation example">
+                <nav aria-label="Page navigation example py-2">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -287,7 +320,7 @@
         </div>
         <div class="col-12 m-0 p-3" id="CreateAppointmentContainer2">
             <div class="m-auto">
-                <h3 class="p-3 text-center bg-dark text-light rounded">New Appointment</h3>
+                <h3 class="p-3 text-center bg-dark text-light rounded">Add New Product</h3>
             </div>
             <div class="my-4 ">
                 <form id="CreateAppointmentForm2">
@@ -323,57 +356,6 @@
                             </div>
                         </div>
                         <button class="btn btn-outline-primary">Create Appointment</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-12 m-0 p-3" id="ModifyAppointmentContainer2">
-            <div class="m-auto">
-                <h3 class="p-3 text-center bg-dark text-light rounded">Modify Appointment</h3>
-                <div class="input-group m-auto">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="">Search...</span>
-                    </div>
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="my-4 ">
-                <form id="ModifyAppointmentForm2">
-                    <div class=" m-auto border border-primary rounded p-3 text-center">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Owner Name:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Date:</label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold text-start" for="default-picker">Select Time:</label>
-                            <div class="col-sm-10">
-                                <input type="time" id="default-picker-m" class="form-control" placeholder="Select time">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Name:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label font-weight-bold text-start">Pet Age:</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row justify-content-around m-auto">
-                            <button class="btn btn-outline-danger">Cancel</button>
-                            <button class="btn btn-outline-primary">Modify Appointment</button>
-                        </div>
                     </div>
                 </form>
             </div>
