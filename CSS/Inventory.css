@@ -34,7 +34,8 @@ body {
     min-height: 250px;
 }
 
-#AddNewProductContainer {
+#AddNewProductContainer,
+#AddNewProductContainer2 {
     display: none;
 }
 
