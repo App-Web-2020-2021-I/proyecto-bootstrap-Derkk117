@@ -30,6 +30,10 @@ body {
     height: 100%;
 }
 
+#Left-side {
+    height: 100%;
+}
+
 .sized-container {
     min-height: 250px;
 }
