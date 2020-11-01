@@ -21,6 +21,10 @@ $(document).ready(function() {
     });
 });
 
+function showAppointment() {
+    window.location = "./Appointment.html";
+}
+
 function showModifyAppointment(list, create, modify) {
     $('#' + list)[0].style.display = "none";
     $('#' + create)[0].style.display = "none";
