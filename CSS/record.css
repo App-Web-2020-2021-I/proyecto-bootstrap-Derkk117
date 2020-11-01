@@ -25,29 +25,6 @@ body {
     flex-basis: 0;
 }
 
-.separator {
-    width: 1px;
-    height: 100%;
-}
-
-.sized-container {
-    min-height: 250px;
-}
-
-#AddNewProductContainer,
-#AddNewProductContainer2 {
-    display: none;
-}
-
-@media (max-width:1000px) {
-    #btn-page {
-        font-size: 10px;
-    }
-    .separator {
-        display: none;
-    }
-}
-
 @media (max-width:600px) {
     #footer {
         font-size: 1em;
